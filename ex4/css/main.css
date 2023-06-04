@@ -47,6 +47,7 @@ header li{
 
 header li:hover{
     background: darkgray;
+    transition: background 800ms;
 }
 
 header a{
@@ -106,7 +107,8 @@ aside a{
 }
 
 aside a:hover{
-    text-decoration: underline;
+    color: red;
+    transition: color 500ms;
 }
 
 /* ***** FOOTER ***** */
@@ -141,4 +143,72 @@ footer p{
 
 footer a[href^="mailto"]{
     display: block;
+}
+
+footer a[href^="mailto"]:hover{
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: font-size ease-in 800ms;
+}
+
+/* ***** TRANSITIONS & ANIMATIONS ***** */
+
+header, footer{
+    animation: fadeIn 2s;
+}
+
+@keyframes fadeIn{
+    0% {opacity:0;}
+    100% {opacity:1;}
+}
+
+.main-home{
+    animation: leftIn 1s;
+}
+
+@keyframes leftIn{
+    0% {
+        opacity:0;
+        transform: translateX(-200px);
+    }
+    100% {
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+aside{
+    animation: rightIn 1s;
+}
+
+@keyframes rightIn{
+    0% {
+        opacity:0;
+        transform: translateX(150px);
+    }
+    100% {
+        opacity:1;
+        transform: translateX(0);
+    }
+}
+
+section a[href^="published"]:hover{
+    animation: shake 200ms;
+}
+
+@keyframes shake{
+    0%{transform: translateX(5px);}
+    50%{transform: translateX(-5px);}
+    100%{transform: translate(0);}
+}
+
+footer h3{
+    animation: colorized 2s infinite;
+}
+
+@keyframes colorized{
+    0%{color: white;}
+    33%{color: skyblue;}
+    66%{color: red;}
+    100%{color: yellow;}
 }
