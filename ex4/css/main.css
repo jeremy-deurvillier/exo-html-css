@@ -1,0 +1,144 @@
+/* ***** GENERIC STYLES ***** */
+
+html, body{
+    margin:0;
+    padding:0;
+}
+
+body{
+    font-family: Roboto;
+    width: 100vw; min-width: 100vw;
+    background: white;
+}
+
+/* ***** HEADER ***** */
+
+header{
+    height: 40px;
+    width: 100vw;
+    background: black;
+    color: white;
+}
+
+h1{
+    font-size: xx-large;
+    margin: 0 10px 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* ***** NAVIGATION ***** */
+
+nav{
+    display: inline-block;
+}
+
+ul{
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+header li{
+    text-align: center;
+    display: inline-block;
+    width: 150px;
+}
+
+header li:hover{
+    background: darkgray;
+}
+
+header a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ***** HOME SECTION ***** */
+
+.main-home{
+    width: 70%;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 10px;
+}
+
+article h3{
+    text-transform: uppercase;
+}
+
+article img{
+    width: 30%;
+    float: left;
+}
+
+article p{
+    text-align: justify;
+}
+
+article a{
+    color: red;
+    text-decoration: none;
+    display: inline-block;
+    float: right;
+}
+
+article a:hover{
+    text-decoration: underline;
+}
+
+/* ***** RIGHT SIDE ***** */
+
+aside{
+    width: 30%;
+    box-sizing: border-box;
+    float: right;
+    padding: 10px;
+    margin-top: 20px;
+    background: lightgray;
+    border-radius: 12px;
+}
+
+aside a{
+    margin: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+aside a:hover{
+    text-decoration: underline;
+}
+
+/* ***** FOOTER ***** */
+
+section{
+    margin-bottom: 200px;
+}
+
+footer{
+    position: fixed;
+    bottom:0;
+    left:0; right:0;
+    background: black;
+    color: white;
+    padding: 10px;
+    box-shadow: 0 -5px 5px lightgray;
+}
+
+footer a{
+    color: lightgray;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer p{
+    text-align: right;
+    margin-right: 10px;
+}
+
+footer a[href^="mailto"]{
+    display: block;
+}
