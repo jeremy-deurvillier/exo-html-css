@@ -1,0 +1,58 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+    min-height: 100vh;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.card{
+    background-color: transparent;
+    width: 200px;
+    height: 400px;
+}
+
+.recto,
+.verso{
+    width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    transition: all 1.5s;
+}
+
+.recto{
+    background: #0284c7; /* Tailwind default color sky 600 */
+    transform: rotateY(0deg);
+}
+
+.verso{
+    background: #4f46e5; /* Tailwind default color indigo 600 */
+    position: relative;
+    top: -400px;
+    z-index: -100;
+    transform: rotateY(180deg);
+}
+
+.card:hover .recto{
+    transform: rotateY(180deg);
+    transition: all 1s;
+}
+
+.card:hover .verso{
+    z-index: 100;
+    transform: rotateY(0deg);
+    transition: all 1s;
+}
