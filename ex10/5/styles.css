@@ -17,3 +17,19 @@ nav a { border-bottom: 1px solid rgba(255,255,255,.3); color: white; display: bl
    éditer à partir d'ici
  * ==================================== */
 
+main{
+    display: flex;
+}
+
+nav{
+    width: 200px; min-width: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    main{ flex-direction: column; }
+
+    nav{
+        order: 2;
+        width: 100vw;
+    }
+}
